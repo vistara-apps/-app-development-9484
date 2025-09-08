@@ -1,5 +1,5 @@
 import React from 'react'
-import { Calendar, TrendingUp, Activity, Sparkles } from 'lucide-react'
+import { Calendar, TrendingUp, Activity, Sparkles, Crown } from 'lucide-react'
 import Button from './Button'
 import StatsCard from './StatsCard'
 
@@ -109,6 +109,17 @@ const DashboardView = ({ userData, onNavigate }) => {
           Quick Exercise
         </Button>
       </div>
+
+      {/* Premium Features Button */}
+      <Button
+        variant="secondary"
+        onClick={() => onNavigate('premium')}
+        className="w-full flex items-center justify-center gap-2 border-yellow-400/30 hover:border-yellow-400/50"
+      >
+        <Crown className="w-4 h-4 text-yellow-400" />
+        <span>Premium Features</span>
+        <span className="text-xs bg-yellow-400/20 text-yellow-400 px-2 py-1 rounded">NEW</span>
+      </Button>
 
       {/* Recent Activity */}
       {hasCheckins && (
